@@ -1,4 +1,3 @@
-
 console.log("Welkom bij de portfolio van Anas!");
 
 const links = document.querySelectorAll(".navbar a");
