@@ -4,167 +4,136 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio | Anas Hageman</title>
+    <meta name="description" content="Portfolio van Anas Hageman, Software Development student uit Groningen.">
+    <title>Home | Anas Hageman</title>
     <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
 </head>
 <body>
 
 <header>
     <nav class="navbar">
-        <a href="#home" class="logo">Anas<span>.</span></a>
-
-        <ul>
-            <li><a href="#home">Home</a></li>
-            <li><a href="#about">Over mij</a></li>
-            <li><a href="#skills">Skills</a></li>
-            <li><a href="#projects">Projecten</a></li>
-            <li><a href="#cv">Mijn CV</a></li>
-            <li><a href="#contact">Contact</a></li>
+        <a href="index.html" class="logo">Anas<span>.</span></a>
+        <button class="menu-toggle" aria-label="Menu openen" aria-expanded="false" aria-controls="navigation">☰</button>
+        <ul id="navigation">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">Over mij</a></li>
+            <li><a href="skills.html">Skills</a></li>
+            <li><a href="projects.html">Projecten</a></li>
+            <li><a href="cv.html">Mijn CV</a></li>
+            <li><a href="contact.html">Contact</a></li>
         </ul>
     </nav>
 </header>
 
-<section id="home" class="hero">
-    <div class="hero-content">
-        <p class="small-title">HALLO, IK BEN</p>
-        <h1>Anas Hageman</h1>
-        <h2>Software Developer</h2>
+<main>
+    <section class="hero">
+        <div class="hero-content">
+            <div class="status">
+                <span class="status-dot"></span>
+                Op zoek naar een stageplek
+            </div>
 
-        <p>
-            Ik bouw websites en applicaties
-            en leer iedere dag nieuwe dingen.
-        </p>
+            <p class="small-title">HALLO, IK BEN</p>
+            <h1>Anas<br><span>Hageman.</span></h1>
+            <h2>Software Developer Student</h2>
 
-        <a href="#projects" class="button">
-            Bekijk mijn projecten
-        </a>
-
-        <a href="#cv" class="button button-secondary">
-            Bekijk mijn CV
-        </a>
-    </div>
-
-    <div class="code-box">
-        <p><span>const</span> developer = {</p>
-        <p>&nbsp;&nbsp;naam: "Anas",</p>
-        <p>&nbsp;&nbsp;leeftijd: 18,</p>
-        <p>&nbsp;&nbsp;rol: "Software Developer"</p>
-        <p>};</p>
-        <p class="green">// Ready to code!</p>
-    </div>
-</section>
-
-<section id="about" class="section">
-    <h2>Over <span>mij</span></h2>
-    <p class="description">
-        Mijn naam is Anas Hageman en ik ben 18 jaar.
-        Ik studeer Software Development en leer hoe ik
-        websites en applicaties kan bouwen.
-        Ik vind programmeren leuk en werk graag aan nieuwe projecten.
-    </p>
-</section>
-
-<section id="skills" class="section">
-    <h2>Mijn <span>skills</span></h2>
-
-    <div class="cards">
-        <div class="card">
-            <h3>HTML</h3>
-            <p>De structuur van websites maken.</p>
-        </div>
-
-        <div class="card">
-            <h3>CSS</h3>
-            <p>Websites vormgeven en stylen.</p>
-        </div>
-
-        <div class="card">
-            <h3>JavaScript</h3>
-            <p>Websites interactief maken.</p>
-        </div>
-
-        <div class="card">
-            <h3>PHP & SQL</h3>
-            <p>Back-end en databases leren bouwen.</p>
-        </div>
-    </div>
-</section>
-
-<section id="projects" class="section">
-    <h2>Mijn <span>projecten</span></h2>
-
-    <div class="cards">
-
-        <a href="https://github.com/anashageman-hash/JavaScript-app"
-           target="_blank"
-           rel="noopener noreferrer"
-           class="card project-link">
-
-            <h3>🚀 RekenRocket</h3>
-            <p>
-                Een rekenspel waarmee kinderen op een leuke
-                manier hun rekenvaardigheden kunnen oefenen.
+            <p class="description">
+                Een gemotiveerde Software Development student
+                uit Groningen. Ik ontwikkel websites en applicaties
+                en wil mezelf blijven verbeteren als developer.
             </p>
 
-            <span class="tag">JavaScript • HTML • CSS</span>
-            <p class="github-text">Bekijk op GitHub →</p>
-        </a>
+            <div class="buttons">
+                <a href="projects.html" class="button">
+                    Bekijk mijn projecten →
+                </a>
+                <a href="cv.html" class="button secondary">
+                    Bekijk mijn CV
+                </a>
+            </div>
 
-        <div class="card">
-            <h3>To-Do App</h3>
-            <p>
-                Een app om taken bij te houden
-                en af te vinken.
-            </p>
-
-            <span class="tag">HTML • CSS • JavaScript</span>
-            <p class="github-text">Project in ontwikkeling</p>
+            <p class="location">Groningen, Nederland · MBO Software Development</p>
         </div>
 
-    </div>
-</section>
+        <div class="code-box">
+            <div class="code-header">
+                <div class="dots">
+                    <i></i><i></i><i></i>
+                </div>
+                <span>developer.js</span>
+            </div>
 
-<section id="cv" class="section cv-section">
-    <h2>Mijn <span>CV</span></h2>
+            <pre><code><span class="purple">const</span> developer = {
+    naam: <span class="green">"Anas Hageman"</span>,
+    leeftijd: <span class="orange">18</span>,
+    locatie: <span class="green">"Groningen"</span>,
+    opleiding: <span class="green">"Software Development"</span>,
 
-    <p class="description">
-        Bekijk mijn CV online of download het als PDF.
-    </p>
+    skills: [
+        <span class="green">"HTML"</span>,
+        <span class="green">"CSS"</span>,
+        <span class="green">"JavaScript"</span>,
+        <span class="green">"PHP"</span>,
+        <span class="green">"MySQL"</span>
+    ],
 
-    <div class="cv-buttons">
-        <a href="CV.pdf" target="_blank"
-           rel="noopener noreferrer" class="button">
-            Bekijk mijn CV
-        </a>
+    stageGezocht: <span class="purple">true</span>
+};
 
-        <a href="CV.pdf" download="Anas-Hageman-CV.pdf"
-           class="button button-secondary">
-            Download mijn CV
-        </a>
-    </div>
+<span class="comment">// Ready for a new challenge!</span></code></pre>
+        </div>
+    </section>
 
-    <div class="cv-viewer">
-        <iframe src="CV.pdf" title="CV van Anas Hageman">
-        </iframe>
-    </div>
-</section>
+    <section class="stats">
+        <div>
+            <strong>3</strong>
+            <p>Uitgelichte projecten</p>
+        </div>
+        <div>
+            <strong>5</strong>
+            <p>Webtechnieken</p>
+        </div>
+        <div>
+            <strong>2e</strong>
+            <p>Leerjaar</p>
+        </div>
+    </section>
 
-<section id="contact" class="section contact">
-    <h2>Neem <span>contact</span> op</h2>
-    <p>Wil je meer weten over mijn projecten?</p>
+    <section class="section">
+        <p class="small-title">ONTDEK MIJN PORTFOLIO</p>
+        <h2>Wat ik <span>doe.</span></h2>
 
-    <a href="https://github.com/anashageman-hash"
-       target="_blank"
-       rel="noopener noreferrer"
-       class="button">
-        Bekijk mijn GitHub
-    </a>
-</section>
+        <div class="grid three-columns">
+            <a href="about.html" class="card">
+                <div class="card-icon">01</div>
+                <h3>Over mij</h3>
+                <p>Leer mij, mijn opleiding en mijn motivatie kennen.</p>
+                <span class="text-link">Lees meer →</span>
+            </a>
+
+            <a href="skills.html" class="card">
+                <div class="card-icon">&lt;/&gt;</div>
+                <h3>Mijn skills</h3>
+                <p>Ontdek met welke talen en technieken ik werk.</p>
+                <span class="text-link">Bekijk skills →</span>
+            </a>
+
+            <a href="projects.html" class="card">
+                <div class="card-icon">03</div>
+                <h3>Mijn projecten</h3>
+                <p>Bekijk de websites en applicaties die ik heb gemaakt.</p>
+                <span class="text-link">Bekijk projecten →</span>
+            </a>
+        </div>
+    </section>
+</main>
 
 <footer>
-    <p>© 2026 Anas Hageman | Mijn portfolio</p>
+    <a href="index.html" class="logo">Anas<span>.</span></a>
+    <p>© 2026 Anas Hageman | Portfolio</p>
+    <a href="contact.html">Contact →</a>
 </footer>
 
-<script src="script.js"></script>
 </body>
 </html>
